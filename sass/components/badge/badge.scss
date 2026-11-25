@@ -1,0 +1,65 @@
+@use 'sass:color';
+@use 'sass:map';
+@use '../../abstracts/variables' as *;
+
+$sizes: (
+  sm: (font-size: 0.75rem, padding: 0.125rem 0.5rem, gap: 0.25rem, dot: 0.375rem),
+  md: (font-size: 0.875rem, padding: 0.25rem 0.75rem, gap: 0.375rem, dot: 0.5rem),
+  lg: (font-size: 1rem, padding: 0.375rem 0.875rem, gap: 0.5rem, dot: 0.625rem),
+);
+
+@mixin badge-color($color) {
+  --badge-bg: #{color.mix($color, $surface, 18%)};
+  --badge-border: #{color.change($color, $alpha: 0.35)};
+  --badge-text: #{color.mix($white, $color, 35%)};
+  --badge-dot: #{$color};
+}
+
+@mixin badge-size($size) {
+  --badge-dot-size: #{map.get($sizes, $size, dot)};
+  gap: map.get($sizes, $size, gap);
+  padding: map.get($sizes, $size, padding);
+  font-size: map.get($sizes, $size, font-size);
+}
+
+.ui-badge {
+  @include badge-color(map.get($colors, primary));
+  @include badge-size(md);
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--badge-border);
+  border-radius: $radius-full;
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  font-family: map.get($fonts, sans);
+  font-weight: 500;
+  line-height: 1.25;
+  white-space: nowrap;
+
+  &__dot {
+    flex-shrink: 0;
+    width: var(--badge-dot-size);
+    height: var(--badge-dot-size);
+    border-radius: $radius-full;
+    background-color: var(--badge-dot);
+    box-shadow: 0 0 0.5rem var(--badge-dot);
+  }
+
+  @each $name, $color in $colors {
+    &--#{$name} {
+      @include badge-color($color);
+    }
+  }
+
+  @each $size, $values in $sizes {
+    &--#{$size} {
+      @include badge-size($size);
+    }
+  }
+
+  @each $name, $family in $fonts {
+    &--#{$name} {
+      font-family: $family;
+    }
+  }
+}

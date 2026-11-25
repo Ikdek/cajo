@@ -36,7 +36,9 @@ Dans les réglages du dépôt, **Settings → Pages → Source** doit être rég
 .
 ├── index.html            page d'accueil (choix de la version)
 ├── sass/
-│   └── index.html        documentation de la version Sass
+│   ├── index.html        documentation de la version Sass
+│   ├── abstracts/        variables partagées (aucune sortie CSS)
+│   └── components/       un dossier par module
 ├── tailwind/
 │   └── index.html        documentation de la version Tailwind CSS
 ├── vite.config.js        build multi-pages (accueil, sass, tailwind)
@@ -62,12 +64,12 @@ Les classes de la documentation sont préfixées `docs-` et ne font pas partie d
 
 | Type | Modificateurs |
 | --- | --- |
-| Couleur | `--primary` · `--secondary` · `--success` · `--danger` |
+| Couleur | `--primary` (défaut) · `--secondary` · `--success` · `--warning` · `--danger` · `--neutral` |
 | Taille | `--sm` · `--md` (défaut) · `--lg` |
-| Police | `--sans` (défaut, Inter) · `--serif` (Lora) |
+| Police | `--sans` (défaut, Plus Jakarta Sans) · `--mono` (JetBrains Mono) |
 
 ```html
-<button class="ui-button ui-button--primary ui-button--lg ui-button--serif">Valider</button>
+<button class="ui-button ui-button--primary ui-button--lg ui-button--mono">Valider</button>
 ```
 
 ### Composants

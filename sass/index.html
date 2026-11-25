@@ -6,7 +6,8 @@
     <title>Documentation — Version Sass</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="./components/badge/badge.scss" />
   </head>
   <body>
     <header class="docs-header">
@@ -44,6 +45,41 @@
 
         <section class="docs-section" id="badge">
           <h2 class="docs-section__title">Badge</h2>
+          <p class="docs-section__description">Étiquette courte pour signaler un statut ou une catégorie. Le point lumineux est facultatif.</p>
+
+          <h3 class="docs-section__subtitle">Couleurs</h3>
+          <div class="docs-demo">
+            <span class="ui-badge ui-badge--primary"><span class="ui-badge__dot" aria-hidden="true"></span>Nouveau</span>
+            <span class="ui-badge ui-badge--secondary"><span class="ui-badge__dot" aria-hidden="true"></span>Pro</span>
+            <span class="ui-badge ui-badge--success"><span class="ui-badge__dot" aria-hidden="true"></span>En ligne</span>
+            <span class="ui-badge ui-badge--warning"><span class="ui-badge__dot" aria-hidden="true"></span>En attente</span>
+            <span class="ui-badge ui-badge--danger"><span class="ui-badge__dot" aria-hidden="true"></span>Hors ligne</span>
+            <span class="ui-badge ui-badge--neutral"><span class="ui-badge__dot" aria-hidden="true"></span>Bêta</span>
+          </div>
+          <pre class="docs-code"><code>&lt;span class="ui-badge ui-badge--primary"&gt;&lt;span class="ui-badge__dot" aria-hidden="true"&gt;&lt;/span&gt;Nouveau&lt;/span&gt;
+&lt;span class="ui-badge ui-badge--secondary"&gt;&lt;span class="ui-badge__dot" aria-hidden="true"&gt;&lt;/span&gt;Pro&lt;/span&gt;
+&lt;span class="ui-badge ui-badge--success"&gt;&lt;span class="ui-badge__dot" aria-hidden="true"&gt;&lt;/span&gt;En ligne&lt;/span&gt;
+&lt;span class="ui-badge ui-badge--warning"&gt;&lt;span class="ui-badge__dot" aria-hidden="true"&gt;&lt;/span&gt;En attente&lt;/span&gt;
+&lt;span class="ui-badge ui-badge--danger"&gt;&lt;span class="ui-badge__dot" aria-hidden="true"&gt;&lt;/span&gt;Hors ligne&lt;/span&gt;
+&lt;span class="ui-badge ui-badge--neutral"&gt;&lt;span class="ui-badge__dot" aria-hidden="true"&gt;&lt;/span&gt;Bêta&lt;/span&gt;</code></pre>
+
+          <h3 class="docs-section__subtitle">Tailles</h3>
+          <div class="docs-demo">
+            <span class="ui-badge ui-badge--success ui-badge--sm"><span class="ui-badge__dot" aria-hidden="true"></span>Petit</span>
+            <span class="ui-badge ui-badge--success ui-badge--md"><span class="ui-badge__dot" aria-hidden="true"></span>Moyen</span>
+            <span class="ui-badge ui-badge--success ui-badge--lg"><span class="ui-badge__dot" aria-hidden="true"></span>Grand</span>
+          </div>
+          <pre class="docs-code"><code>&lt;span class="ui-badge ui-badge--success ui-badge--sm"&gt;&lt;span class="ui-badge__dot" aria-hidden="true"&gt;&lt;/span&gt;Petit&lt;/span&gt;
+&lt;span class="ui-badge ui-badge--success ui-badge--md"&gt;&lt;span class="ui-badge__dot" aria-hidden="true"&gt;&lt;/span&gt;Moyen&lt;/span&gt;
+&lt;span class="ui-badge ui-badge--success ui-badge--lg"&gt;&lt;span class="ui-badge__dot" aria-hidden="true"&gt;&lt;/span&gt;Grand&lt;/span&gt;</code></pre>
+
+          <h3 class="docs-section__subtitle">Polices</h3>
+          <div class="docs-demo">
+            <span class="ui-badge ui-badge--primary ui-badge--sans">Plus Jakarta Sans</span>
+            <span class="ui-badge ui-badge--primary ui-badge--mono">JetBrains Mono</span>
+          </div>
+          <pre class="docs-code"><code>&lt;span class="ui-badge ui-badge--primary ui-badge--sans"&gt;Plus Jakarta Sans&lt;/span&gt;
+&lt;span class="ui-badge ui-badge--primary ui-badge--mono"&gt;JetBrains Mono&lt;/span&gt;</code></pre>
         </section>
 
         <section class="docs-section" id="progress">
