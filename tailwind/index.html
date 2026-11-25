@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="./docs.css" />
+    <link rel="stylesheet" href="./components/button/button.css" />
   </head>
   <body>
     <header class="docs-header">
@@ -38,8 +40,59 @@
       </aside>
 
       <main class="docs-main">
-        <section class="docs-section" id="button">
-          <h2 class="docs-section__title">Bouton</h2>
+        <section class="docs-section" id="button" aria-labelledby="button-title">
+          <div class="docs-button-heading">
+            <p class="docs-eyebrow">Nova UI · Composants / Tailwind CSS</p>
+            <h1 class="docs-button-title" id="button-title">Les boutons.</h1>
+            <p class="docs-lead">Quatre dégradés, trois tailles et deux polices. Une même signature visuelle pour toutes vos actions.</p>
+          </div>
+          <article class="docs-card">
+            <h2 class="docs-card__title">Quatre couleurs, une identité</h2>
+            <p class="docs-description">Les dégradés Nova UI, orientés à 135°. Le texte sombre conserve un contraste lisible sur les quatre palettes.</p>
+            <div class="docs-color-grid"><div class="docs-sample"><p class="docs-sample__label">Violet Nebula</p><button type="button" class="ui-button ui-button--primary">Bouton</button><p class="docs-sample__meta">#8B5CF6 → #6366F1<br><code>--primary</code></p></div><div class="docs-sample"><p class="docs-sample__label">Arctic Cyan</p><button type="button" class="ui-button ui-button--secondary">Bouton</button><p class="docs-sample__meta">#06B6D4 → #0EA5E9<br><code>--secondary</code></p></div><div class="docs-sample"><p class="docs-sample__label">Emerald Pulse</p><button type="button" class="ui-button ui-button--success">Bouton</button><p class="docs-sample__meta">#10B981 → #059669<br><code>--success</code></p></div><div class="docs-sample"><p class="docs-sample__label">Solar Amber</p><button type="button" class="ui-button ui-button--warning">Bouton</button><p class="docs-sample__meta">#F59E0B → #F97316<br><code>--warning</code></p></div></div>
+            <details class="docs-code"><summary>Voir le code HTML</summary><pre><code>&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--primary&quot;&gt;Bouton&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--secondary&quot;&gt;Bouton&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--success&quot;&gt;Bouton&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--warning&quot;&gt;Bouton&lt;/button&gt;</code></pre></details>
+            <p class="docs-note">La variante <code>--warning</code> correspond à Solar Amber. Les variantes sémantiques <code>--danger</code> et <code>--neutral</code> complètent les quatre palettes ci-dessus.</p>
+          </article>
+          <article class="docs-card">
+            <h2 class="docs-card__title">Les intentions complémentaires</h2>
+            <p class="docs-description">Danger et neutre complètent les palettes Nova UI, conformément aux conventions du dépôt.</p>
+            <div class="docs-examples"><button type="button" class="ui-button ui-button--danger">Action destructive</button><button type="button" class="ui-button ui-button--neutral">Action neutre</button></div>
+            <details class="docs-code"><summary>Voir le code HTML</summary><pre><code>&lt;button type="button" class="ui-button ui-button--danger"&gt;Action destructive&lt;/button&gt;
+&lt;button type="button" class="ui-button ui-button--neutral"&gt;Action neutre&lt;/button&gt;</code></pre></details>
+          </article>
+          <article class="docs-card">
+            <h2 class="docs-card__title">Une taille pour chaque contexte</h2>
+            <p class="docs-description">Petit : 36 px · Moyen : 44 px · Grand : 52 px. La taille moyenne est utilisée par défaut. Privilégiez moyen ou grand sur les interfaces tactiles.</p>
+            <div class="docs-examples"><button type="button" class="ui-button ui-button--primary ui-button--sm">Petit bouton</button><button type="button" class="ui-button ui-button--primary ui-button--md">Bouton moyen</button><button type="button" class="ui-button ui-button--primary ui-button--lg">Grand bouton</button></div><details class="docs-code"><summary>Voir le code HTML</summary><pre><code>&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--primary ui-button--sm&quot;&gt;Petit bouton&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--primary ui-button--md&quot;&gt;Bouton moyen&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--primary ui-button--lg&quot;&gt;Grand bouton&lt;/button&gt;</code></pre></details>
+          </article>
+          <article class="docs-card">
+            <h2 class="docs-card__title">Deux expressions typographiques</h2>
+            <p class="docs-description">Plus Jakarta Sans reprend la référence Nova UI. JetBrains Mono reprend la variante monospace prévue par les conventions partagées. Sans est la police par défaut.</p>
+            <div class="docs-examples"><button type="button" class="ui-button ui-button--primary ui-button--sans">Plus Jakarta Sans</button><button type="button" class="ui-button ui-button--primary ui-button--mono">JetBrains Mono</button></div><details class="docs-code"><summary>Voir le code HTML</summary><pre><code>&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--primary ui-button--sans&quot;&gt;Plus Jakarta Sans&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--primary ui-button--mono&quot;&gt;JetBrains Mono&lt;/button&gt;</code></pre></details>
+          </article>
+          <article class="docs-card">
+            <h2 class="docs-card__title">Des états à essayer</h2>
+            <p class="docs-description">Survolez un bouton, parcourez la page avec Tab ou maintenez le clic. Le dernier bouton utilise l’attribut natif disabled. Ces démonstrations ne déclenchent aucune action.</p>
+            <div class="docs-examples"><button type="button" class="ui-button ui-button--primary">Survolez-moi</button><button type="button" class="ui-button ui-button--secondary">Focus avec Tab</button><button type="button" class="ui-button ui-button--success">Maintenez le clic</button><button type="button" class="ui-button ui-button--primary" disabled>Indisponible</button></div><details class="docs-code"><summary>Voir le code HTML</summary><pre><code>&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--primary&quot;&gt;Survolez-moi&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--secondary&quot;&gt;Focus avec Tab&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--success&quot;&gt;Maintenez le clic&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--primary&quot; disabled&gt;Indisponible&lt;/button&gt;</code></pre></details>
+            <p class="docs-note">Survol : 180 ms · Pression : 120 ms. Les transitions sont désactivées lorsque la réduction des animations est demandée.</p>
+          </article>
+          <article class="docs-card">
+            <h2 class="docs-card__title">Composez vos variantes</h2>
+            <p class="docs-description">Associez une couleur, une taille et une police à la classe de base <code>ui-button</code>. Le HTML est commun aux versions Tailwind et Sass.</p>
+            <div class="docs-examples"><button type="button" class="ui-button ui-button--secondary ui-button--lg ui-button--mono">Continuer</button><button type="button" class="ui-button ui-button--success ui-button--sm ui-button--sans">Confirmer</button><button type="button" class="ui-button ui-button--warning ui-button--md ui-button--mono" disabled>En attente</button></div><details class="docs-code"><summary>Voir le code HTML</summary><pre><code>&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--secondary ui-button--lg ui-button--mono&quot;&gt;Continuer&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--success ui-button--sm ui-button--sans&quot;&gt;Confirmer&lt;/button&gt;
+&lt;button type=&quot;button&quot; class=&quot;ui-button ui-button--warning ui-button--md ui-button--mono&quot; disabled&gt;En attente&lt;/button&gt;</code></pre></details>
+            <p class="docs-note">Utilisez <code>type="button"</code> pour une action et <code>type="submit"</code> pour soumettre un formulaire. Un lien de navigation reste un élément <code>&lt;a&gt;</code>.</p>
+          </article>
         </section>
 
         <section class="docs-section" id="badge">
@@ -85,7 +138,6 @@
       </main>
     </div>
 
-    <footer class="docs-footer">
-    </footer>
+    <footer class="docs-footer">Nova UI · Bibliothèque de composants · Documentation Tailwind CSS</footer>
   </body>
 </html>

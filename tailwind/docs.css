@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Présentation de la documentation uniquement : aucune classe ui- ici. */
+@layer base {
+  html { color-scheme: dark; scrollbar-color: #6366f1 #15182b; scrollbar-gutter: stable; }
+  body { margin: 0; background: #0b0d1a; color: #f5f5ff; font-family: "Plus Jakarta Sans", sans-serif; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid #22d3ee; outline-offset: 4px; }
+  ::selection { background: #6366f1; color: white; }
+}
+.docs-header { @apply flex flex-wrap items-center justify-between gap-4 border-b px-6 py-5; border-color: #34385b; background: #101225; }
+.docs-header__brand { @apply text-lg font-bold no-underline; }
+.docs-header__nav { @apply flex gap-2 text-sm; }
+.docs-header__link { @apply rounded-lg px-4 py-2; color: #a5aacb; }
+.docs-header__link:hover, .docs-header__link--active { background: #262044; color: #f5f5ff; }
+.docs-layout { @apply mx-auto grid max-w-[1440px] gap-8 px-5 py-8 lg:grid-cols-[200px_minmax(0,1fr)] lg:px-8; }
+.docs-sidebar { @apply min-w-0 text-sm; }
+.docs-sidebar__title { @apply mb-4 text-xs font-semibold uppercase tracking-widest; color: #a5aacb; }
+.docs-sidebar__list { @apply flex flex-wrap gap-2 lg:flex-col; }
+.docs-sidebar__link { @apply block rounded-lg px-3 py-2; color: #a5aacb; }
+.docs-sidebar__link:hover, .docs-sidebar__link[href="#button"] { background: #262044; color: #f5f5ff; }
+.docs-main { @apply min-w-0; }
+.docs-section { @apply mb-5 scroll-mt-6; }
+.docs-section:has(> h2:only-child) { @apply border-b py-4; border-color: #34385b; color: #a5aacb; }
+.docs-section:has(> h2:only-child)::after { content: "Documentation à venir"; font-size: 12px; }
+.docs-section__title { @apply text-xl font-semibold; }
+.docs-button-heading { @apply mb-8 max-w-3xl; }
+.docs-eyebrow { @apply mb-3 text-xs font-semibold uppercase tracking-[0.18em]; color: #c4b5fd; }
+.docs-button-title { @apply mb-4 text-4xl font-bold tracking-tight sm:text-5xl; }
+.docs-lead { @apply leading-7; color: #a5aacb; }
+.docs-card { @apply mb-5 min-w-0 rounded-[20px] border p-5 sm:p-7; border-color: #34385b; background: linear-gradient(135deg, #15182b, #101225); }
+.docs-card__title { @apply mb-2 text-xl font-semibold; }
+.docs-description { @apply mb-6 text-sm leading-6; color: #a5aacb; }
+.docs-examples { @apply flex flex-wrap items-center gap-5; }
+.docs-color-grid { @apply grid gap-5 sm:grid-cols-2 xl:grid-cols-4; }
+.docs-sample { @apply flex min-w-0 flex-col items-start gap-3; }
+.docs-sample__label { @apply text-sm font-semibold; }
+.docs-sample__meta { @apply text-xs leading-5; color: #a5aacb; }
+.docs-code { @apply mt-6 min-w-0; }
+.docs-code summary { @apply cursor-pointer rounded-lg py-2 text-sm font-medium; color: #c4b5fd; }
+.docs-code summary:hover { color: #f5f5ff; }
+.docs-code pre { @apply mt-3 max-w-full overflow-x-auto rounded-xl border p-4 text-xs leading-6; background: #0b0d1a; border-color: #34385b; color: #c4d0ed; }
+.docs-note { @apply mt-5 border-l-2 pl-4 text-xs leading-6; border-color: #8b5cf6; color: #a5aacb; }
+.docs-footer { @apply border-t px-6 py-6 text-center text-xs; border-color: #34385b; color: #a5aacb; }
+@media (forced-colors: active) { html { scrollbar-color: auto; } }

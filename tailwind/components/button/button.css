@@ -1,0 +1,66 @@
+@reference "tailwindcss";
+
+/* Nova UI : noms BEM communs avec Sass, valeurs issues de la référence visuelle.
+   --warning désigne Solar Amber ; danger et neutral suivent les conventions communes.
+   Les polices sont chargées par la page de documentation. */
+.ui-button {
+  --button-from: #8b5cf6;
+  --button-to: #6366f1;
+  --button-glow: #8b5cf6;
+  --button-ink: #03040a;
+  @apply inline-flex max-w-full items-center justify-center gap-2 border border-transparent text-center font-semibold leading-6;
+  min-height: 44px;
+  padding: 8px 24px;
+  border-radius: 14px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 14px;
+  color: var(--button-ink);
+  background: linear-gradient(135deg, var(--button-from), var(--button-to));
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--button-glow) 16%, transparent);
+  transition: filter 180ms ease, box-shadow 180ms ease, transform 120ms ease;
+  overflow-wrap: anywhere;
+  vertical-align: middle;
+}
+
+.ui-button--primary { --button-from: #8b5cf6; --button-to: #6366f1; --button-glow: #8b5cf6; }
+.ui-button--secondary { --button-from: #06b6d4; --button-to: #0ea5e9; --button-glow: #06b6d4; }
+.ui-button--success { --button-from: #10b981; --button-to: #059669; --button-glow: #10b981; }
+.ui-button--warning { --button-from: #f59e0b; --button-to: #f97316; --button-glow: #f59e0b; }
+
+.ui-button--danger { --button-from: #ef4444; --button-to: #f87171; --button-glow: #ef4444; }
+.ui-button--neutral { --button-from: #94a3b8; --button-to: #cbd5e1; --button-glow: #94a3b8; }
+
+.ui-button--sm { min-height: 36px; padding: 4px 16px; border-radius: 8px; font-size: 12px; }
+.ui-button--md { min-height: 44px; padding: 8px 24px; border-radius: 14px; font-size: 14px; }
+.ui-button--lg { min-height: 52px; padding: 12px 32px; border-radius: 20px; font-size: 16px; }
+.ui-button--sans { font-family: "Plus Jakarta Sans", sans-serif; }
+.ui-button--mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+.ui-button:not(:disabled) { @apply cursor-pointer; }
+@media (hover: hover) {
+  .ui-button:hover:not(:disabled) {
+    filter: brightness(1.1);
+    box-shadow: 0 0 24px color-mix(in srgb, var(--button-glow) 35%, transparent);
+  }
+}
+.ui-button:focus-visible {
+  outline: 2px solid #f5f5ff;
+  outline-offset: 4px;
+  box-shadow: 0 0 24px color-mix(in srgb, var(--button-glow) 35%, transparent);
+}
+.ui-button:active:not(:disabled) { transform: translateY(1px) scale(0.98); filter: brightness(1.05); }
+.ui-button:disabled {
+  @apply cursor-not-allowed;
+  color: #a5aacb;
+  background: #34385b;
+  box-shadow: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ui-button { transition: none; }
+  .ui-button:active:not(:disabled) { transform: none; }
+}
+@media (forced-colors: active) {
+  .ui-button { border-color: ButtonText; color: ButtonText; background: ButtonFace; box-shadow: none; }
+  .ui-button:focus-visible { outline-color: Highlight; }
+  .ui-button:disabled { color: GrayText; border-color: GrayText; }
+}
