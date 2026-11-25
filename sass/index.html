@@ -3,48 +3,166 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Documentation — Version Sass</title>
+    <title>CAJO — Documentation Sass</title>
+    <meta name="description" content="Documentation de la version Sass de la bibliothèque de composants CAJO." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="./docs/docs.scss" />
     <link rel="stylesheet" href="./components/badge/badge.scss" />
   </head>
   <body>
-    <header class="docs-header">
-      <a class="docs-header__brand" href="../">Bibliothèque de composants</a>
-      <nav class="docs-header__nav" aria-label="Versions">
-        <a class="docs-header__link docs-header__link--active" aria-current="page" href="../sass/">Sass</a>
-        <a class="docs-header__link" href="../tailwind/">Tailwind CSS</a>
-      </nav>
-    </header>
-
     <div class="docs-layout">
       <aside class="docs-sidebar">
-        <nav aria-label="Composants">
-          <p class="docs-sidebar__title">Composants</p>
-          <ul class="docs-sidebar__list">
-            <li><a class="docs-sidebar__link" href="#button">Bouton</a></li>
-            <li><a class="docs-sidebar__link" href="#badge">Badge</a></li>
-            <li><a class="docs-sidebar__link" href="#progress">Barre de progression</a></li>
-            <li><a class="docs-sidebar__link" href="#notification">Notification</a></li>
-            <li><a class="docs-sidebar__link" href="#loader">Indicateur de chargement</a></li>
-            <li><a class="docs-sidebar__link" href="#tooltip">Infobulle</a></li>
-            <li><a class="docs-sidebar__link" href="#field">Champ de formulaire</a></li>
-            <li><a class="docs-sidebar__link" href="#input">Champ de texte</a></li>
-            <li><a class="docs-sidebar__link" href="#textarea">Zone de texte</a></li>
-            <li><a class="docs-sidebar__link" href="#checkbox">Case à cocher</a></li>
-            <li><a class="docs-sidebar__link" href="#radio">Bouton radio</a></li>
-          </ul>
+        <a class="docs-brand" href="../">
+          <svg class="docs-brand__logo" viewBox="0 0 64 48" aria-hidden="true">
+            <defs>
+              <linearGradient id="cajo-logo" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#a855f7" />
+                <stop offset="1" stop-color="#38bdf8" />
+              </linearGradient>
+            </defs>
+            <path d="M4 40 22 8h14L18 40Z" fill="url(#cajo-logo)" />
+            <path d="M26 40 44 8h14L40 40Z" fill="url(#cajo-logo)" opacity="0.7" />
+          </svg>
+          <span class="docs-brand__name">CAJO</span>
+          <span class="docs-brand__tagline">Design System</span>
+        </a>
+
+        <nav class="docs-switch" aria-label="Versions">
+          <a class="docs-switch__link docs-switch__link--active" aria-current="page" href="../sass/">Sass</a>
+          <a class="docs-switch__link" href="../tailwind/">Tailwind</a>
+        </nav>
+
+        <nav class="docs-nav" aria-label="Sommaire">
+          <div>
+            <p class="docs-nav__title">Fondations</p>
+            <ul class="docs-nav__list">
+              <li><a class="docs-nav__link" href="#fondations">Couleurs et typographie</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="docs-nav__title">Composants</p>
+            <ul class="docs-nav__list">
+              <li><a class="docs-nav__link docs-nav__link--soon" href="#button">Bouton</a></li>
+              <li><a class="docs-nav__link" href="#badge">Badge</a></li>
+              <li><a class="docs-nav__link docs-nav__link--soon" href="#progress">Barre de progression</a></li>
+              <li><a class="docs-nav__link docs-nav__link--soon" href="#notification">Notification</a></li>
+              <li><a class="docs-nav__link docs-nav__link--soon" href="#loader">Indicateur de chargement</a></li>
+              <li><a class="docs-nav__link docs-nav__link--soon" href="#tooltip">Infobulle</a></li>
+              <li><a class="docs-nav__link docs-nav__link--soon" href="#field">Champ de formulaire</a></li>
+              <li><a class="docs-nav__link docs-nav__link--soon" href="#input">Champ de texte</a></li>
+              <li><a class="docs-nav__link docs-nav__link--soon" href="#textarea">Zone de texte</a></li>
+              <li><a class="docs-nav__link docs-nav__link--soon" href="#checkbox">Case à cocher</a></li>
+              <li><a class="docs-nav__link docs-nav__link--soon" href="#radio">Bouton radio</a></li>
+            </ul>
+          </div>
         </nav>
       </aside>
 
       <main class="docs-main">
+        <header class="docs-hero">
+          <span class="ui-badge ui-badge--primary"><span class="ui-badge__dot" aria-hidden="true"></span>Version Sass</span>
+          <h1 class="docs-hero__title">Composants</h1>
+          <p class="docs-hero__lead">Une collection de composants modernes et élégants, pour une expérience fluide et immersive. Entièrement en CSS, sans une ligne de JavaScript.</p>
+          <dl class="docs-stats">
+            <div class="docs-stats__item">
+              <dt class="docs-stats__label">Composants</dt>
+              <dd class="docs-stats__value">11</dd>
+            </div>
+            <div class="docs-stats__item">
+              <dt class="docs-stats__label">Couleurs</dt>
+              <dd class="docs-stats__value">6</dd>
+            </div>
+            <div class="docs-stats__item">
+              <dt class="docs-stats__label">Tailles</dt>
+              <dd class="docs-stats__value">3</dd>
+            </div>
+            <div class="docs-stats__item">
+              <dt class="docs-stats__label">Polices</dt>
+              <dd class="docs-stats__value">2</dd>
+            </div>
+            <div class="docs-stats__item">
+              <dt class="docs-stats__label">JavaScript</dt>
+              <dd class="docs-stats__value">0</dd>
+            </div>
+          </dl>
+        </header>
+
+        <section class="docs-section" id="fondations">
+          <h2 class="docs-section__title">Fondations</h2>
+          <p class="docs-section__description">Les valeurs partagées par tous les composants : couleurs, typographie, espacements et rayons.</p>
+
+          <div class="docs-foundations">
+            <div class="docs-panel">
+              <h3 class="docs-panel__title">Couleurs</h3>
+              <ul class="docs-swatches">
+                <li class="docs-swatch docs-swatch--primary"><span class="docs-swatch__chip"></span>Primaire<code class="docs-swatch__value">#6366f1</code></li>
+                <li class="docs-swatch docs-swatch--secondary"><span class="docs-swatch__chip"></span>Secondaire<code class="docs-swatch__value">#06b6d4</code></li>
+                <li class="docs-swatch docs-swatch--success"><span class="docs-swatch__chip"></span>Succès<code class="docs-swatch__value">#10b981</code></li>
+                <li class="docs-swatch docs-swatch--warning"><span class="docs-swatch__chip"></span>Avertissement<code class="docs-swatch__value">#f59e0b</code></li>
+                <li class="docs-swatch docs-swatch--danger"><span class="docs-swatch__chip"></span>Erreur<code class="docs-swatch__value">#ef4444</code></li>
+                <li class="docs-swatch docs-swatch--neutral"><span class="docs-swatch__chip"></span>Neutre<code class="docs-swatch__value">#94a3b8</code></li>
+              </ul>
+            </div>
+
+            <div class="docs-panel">
+              <h3 class="docs-panel__title">Typographie</h3>
+              <div class="docs-fonts">
+                <div class="docs-font">
+                  <p class="docs-font__sample">Aa</p>
+                  <p class="docs-font__name">Plus Jakarta Sans</p>
+                </div>
+                <div class="docs-font docs-font--mono">
+                  <p class="docs-font__sample">Aa</p>
+                  <p class="docs-font__name">JetBrains Mono</p>
+                </div>
+              </div>
+              <dl class="docs-scale">
+                <div class="docs-scale__row"><dt>Titre 1</dt><dd class="docs-scale__value">36px / 700</dd></div>
+                <div class="docs-scale__row"><dt>Titre 2</dt><dd class="docs-scale__value">28px / 600</dd></div>
+                <div class="docs-scale__row"><dt>Titre 3</dt><dd class="docs-scale__value">20px / 600</dd></div>
+                <div class="docs-scale__row"><dt>Texte courant</dt><dd class="docs-scale__value">16px / 400</dd></div>
+                <div class="docs-scale__row"><dt>Texte secondaire</dt><dd class="docs-scale__value">14px / 400</dd></div>
+                <div class="docs-scale__row"><dt>Légende</dt><dd class="docs-scale__value">12px / 400</dd></div>
+              </dl>
+            </div>
+
+            <div class="docs-panel">
+              <h3 class="docs-panel__title">Espacements</h3>
+              <ul class="docs-spacings">
+                <li class="docs-spacing docs-spacing--xs"><span class="docs-spacing__label">XS</span><span class="docs-spacing__bar"></span><code class="docs-spacing__value">4px</code></li>
+                <li class="docs-spacing docs-spacing--s"><span class="docs-spacing__label">S</span><span class="docs-spacing__bar"></span><code class="docs-spacing__value">8px</code></li>
+                <li class="docs-spacing docs-spacing--m"><span class="docs-spacing__label">M</span><span class="docs-spacing__bar"></span><code class="docs-spacing__value">16px</code></li>
+                <li class="docs-spacing docs-spacing--l"><span class="docs-spacing__label">L</span><span class="docs-spacing__bar"></span><code class="docs-spacing__value">24px</code></li>
+                <li class="docs-spacing docs-spacing--xl"><span class="docs-spacing__label">XL</span><span class="docs-spacing__bar"></span><code class="docs-spacing__value">32px</code></li>
+              </ul>
+            </div>
+
+            <div class="docs-panel">
+              <h3 class="docs-panel__title">Rayons</h3>
+              <ul class="docs-radii">
+                <li class="docs-radius docs-radius--sm"><span class="docs-radius__shape"></span><code class="docs-radius__value">8px</code></li>
+                <li class="docs-radius docs-radius--lg"><span class="docs-radius__shape"></span><code class="docs-radius__value">18px</code></li>
+                <li class="docs-radius docs-radius--full"><span class="docs-radius__shape"></span><code class="docs-radius__value">Complet</code></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         <section class="docs-section" id="button">
-          <h2 class="docs-section__title">Bouton</h2>
+          <div class="docs-section__header">
+            <h2 class="docs-section__title">Bouton</h2>
+            <span class="ui-badge ui-badge--neutral ui-badge--sm"><span class="ui-badge__dot" aria-hidden="true"></span>À venir</span>
+          </div>
+          <p class="docs-section__description">Déclenche une action. Module en cours de réalisation.</p>
         </section>
 
         <section class="docs-section" id="badge">
-          <h2 class="docs-section__title">Badge</h2>
+          <div class="docs-section__header">
+            <h2 class="docs-section__title">Badge</h2>
+            <span class="ui-badge ui-badge--success ui-badge--sm"><span class="ui-badge__dot" aria-hidden="true"></span>Disponible</span>
+          </div>
           <p class="docs-section__description">Étiquette courte pour signaler un statut ou une catégorie. Le point lumineux est facultatif.</p>
 
           <h3 class="docs-section__subtitle">Couleurs</h3>
@@ -83,45 +201,81 @@
         </section>
 
         <section class="docs-section" id="progress">
-          <h2 class="docs-section__title">Barre de progression</h2>
+          <div class="docs-section__header">
+            <h2 class="docs-section__title">Barre de progression</h2>
+            <span class="ui-badge ui-badge--neutral ui-badge--sm"><span class="ui-badge__dot" aria-hidden="true"></span>À venir</span>
+          </div>
+          <p class="docs-section__description">Indique l'avancement d'une tâche. Module en cours de réalisation.</p>
         </section>
 
         <section class="docs-section" id="notification">
-          <h2 class="docs-section__title">Notification</h2>
+          <div class="docs-section__header">
+            <h2 class="docs-section__title">Notification</h2>
+            <span class="ui-badge ui-badge--neutral ui-badge--sm"><span class="ui-badge__dot" aria-hidden="true"></span>À venir</span>
+          </div>
+          <p class="docs-section__description">Informe l'utilisateur d'un événement. Module en cours de réalisation.</p>
         </section>
 
         <section class="docs-section" id="loader">
-          <h2 class="docs-section__title">Indicateur de chargement</h2>
+          <div class="docs-section__header">
+            <h2 class="docs-section__title">Indicateur de chargement</h2>
+            <span class="ui-badge ui-badge--neutral ui-badge--sm"><span class="ui-badge__dot" aria-hidden="true"></span>À venir</span>
+          </div>
+          <p class="docs-section__description">Signale un traitement en cours. Module en cours de réalisation.</p>
         </section>
 
         <section class="docs-section" id="tooltip">
-          <h2 class="docs-section__title">Infobulle</h2>
+          <div class="docs-section__header">
+            <h2 class="docs-section__title">Infobulle</h2>
+            <span class="ui-badge ui-badge--neutral ui-badge--sm"><span class="ui-badge__dot" aria-hidden="true"></span>À venir</span>
+          </div>
+          <p class="docs-section__description">Affiche une information au survol ou au focus. Module en cours de réalisation.</p>
         </section>
 
         <section class="docs-section" id="field">
-          <h2 class="docs-section__title">Champ de formulaire</h2>
+          <div class="docs-section__header">
+            <h2 class="docs-section__title">Champ de formulaire</h2>
+            <span class="ui-badge ui-badge--neutral ui-badge--sm"><span class="ui-badge__dot" aria-hidden="true"></span>À venir</span>
+          </div>
+          <p class="docs-section__description">Regroupe un libellé, un contrôle et un message d'aide. Module en cours de réalisation.</p>
         </section>
 
         <section class="docs-section" id="input">
-          <h2 class="docs-section__title">Champ de texte</h2>
+          <div class="docs-section__header">
+            <h2 class="docs-section__title">Champ de texte</h2>
+            <span class="ui-badge ui-badge--neutral ui-badge--sm"><span class="ui-badge__dot" aria-hidden="true"></span>À venir</span>
+          </div>
+          <p class="docs-section__description">Saisie d'un texte court. Module en cours de réalisation.</p>
         </section>
 
         <section class="docs-section" id="textarea">
-          <h2 class="docs-section__title">Zone de texte</h2>
+          <div class="docs-section__header">
+            <h2 class="docs-section__title">Zone de texte</h2>
+            <span class="ui-badge ui-badge--neutral ui-badge--sm"><span class="ui-badge__dot" aria-hidden="true"></span>À venir</span>
+          </div>
+          <p class="docs-section__description">Saisie d'un texte long sur plusieurs lignes. Module en cours de réalisation.</p>
         </section>
 
         <section class="docs-section" id="checkbox">
-          <h2 class="docs-section__title">Case à cocher</h2>
+          <div class="docs-section__header">
+            <h2 class="docs-section__title">Case à cocher</h2>
+            <span class="ui-badge ui-badge--neutral ui-badge--sm"><span class="ui-badge__dot" aria-hidden="true"></span>À venir</span>
+          </div>
+          <p class="docs-section__description">Active ou désactive une option. Module en cours de réalisation.</p>
         </section>
 
         <section class="docs-section" id="radio">
-          <h2 class="docs-section__title">Bouton radio</h2>
+          <div class="docs-section__header">
+            <h2 class="docs-section__title">Bouton radio</h2>
+            <span class="ui-badge ui-badge--neutral ui-badge--sm"><span class="ui-badge__dot" aria-hidden="true"></span>À venir</span>
+          </div>
+          <p class="docs-section__description">Choix unique parmi plusieurs options. Module en cours de réalisation.</p>
         </section>
 
+        <footer class="docs-footer">
+          <p>CAJO · Projet Sass &amp; Tailwind CSS · 2026</p>
+        </footer>
       </main>
     </div>
-
-    <footer class="docs-footer">
-    </footer>
   </body>
 </html>

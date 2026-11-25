@@ -37,8 +37,9 @@ Dans les réglages du dépôt, **Settings → Pages → Source** doit être rég
 ├── index.html            page d'accueil (choix de la version)
 ├── sass/
 │   ├── index.html        documentation de la version Sass
-│   ├── abstracts/        variables partagées (aucune sortie CSS)
-│   └── components/       un dossier par module
+│   ├── abstracts/        variables et mixins partagés (aucune sortie CSS)
+│   ├── components/       un dossier par module
+│   └── docs/             styles de la page de documentation
 ├── tailwind/
 │   └── index.html        documentation de la version Tailwind CSS
 ├── vite.config.js        build multi-pages (accueil, sass, tailwind)
