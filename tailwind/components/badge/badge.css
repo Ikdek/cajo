@@ -1,0 +1,77 @@
+@reference "tailwindcss";
+
+.docs-badge__row {
+  @apply flex flex-wrap items-center gap-6;
+}
+
+.docs-badge__title {
+  @apply mb-0 font-sans text-sm font-medium text-slate-300;
+}
+
+.docs-badge__items {
+  @apply flex flex-wrap items-center gap-5;
+}
+
+.ui-badge {
+  --badge-accent: #8b5cf6;
+  --badge-background: linear-gradient(135deg, #3b1768, #24154c);
+  --badge-border: #8b5cf6;
+  --badge-highlight: #e9d5ff;
+  --badge-glow: rgb(139 92 246 / 14%);
+
+  @apply inline-flex items-center gap-1 rounded-full border px-1.5 py-1 text-[0.625rem] font-medium leading-none whitespace-nowrap;
+
+  border-color: var(--badge-border);
+  background-image: var(--badge-background);
+  color: #f1f5f9;
+  font-family: Inter, sans-serif;
+  box-shadow: 0 0 14px var(--badge-glow);
+}
+
+.ui-badge__dot {
+  @apply size-2.5 shrink-0 rounded-full;
+
+  background: radial-gradient(circle at 35% 30%, var(--badge-highlight), var(--badge-accent) 72%);
+  box-shadow: 0 0 0.45rem var(--badge-accent);
+}
+
+.ui-badge--primary {
+  --badge-accent: #8b5cf6;
+  --badge-background: linear-gradient(135deg, #3b1768, #24154c);
+  --badge-border: #8b5cf6;
+  --badge-highlight: #e9d5ff;
+  --badge-glow: rgb(139 92 246 / 14%);
+}
+
+.ui-badge--secondary {
+  --badge-accent: #12a9ff;
+  --badge-background: linear-gradient(135deg, #15518b, #10274b);
+  --badge-border: #168de3;
+  --badge-highlight: #b7eeff;
+  --badge-glow: rgb(18 169 255 / 24%);
+}
+
+.ui-badge--success {
+  --badge-accent: #12d894;
+  --badge-background: linear-gradient(135deg, #0a6048, #103a34);
+  --badge-border: #10b981;
+  --badge-highlight: #b9ffe2;
+  --badge-glow: rgb(16 185 129 / 24%);
+}
+
+.ui-badge--warning {
+  --badge-accent: #ffae24;
+  --badge-background: linear-gradient(135deg, #704a13, #41301a);
+  --badge-border: #e7a01b;
+  --badge-highlight: #fff0b5;
+  --badge-glow: rgb(245 158 11 / 24%);
+}
+
+.ui-badge--danger {
+  --badge-accent: #ff536a;
+  --badge-background: linear-gradient(135deg, #702238, #421b2a);
+  --badge-border: #e34c67;
+  --badge-highlight: #ffc2cb;
+  --badge-glow: rgb(239 68 68 / 24%);
+}
+

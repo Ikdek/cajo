@@ -6,7 +6,8 @@
     <title>Documentation — Version Tailwind CSS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="./components/badge/badge.css" />
   </head>
   <body>
     <header class="docs-header">
@@ -43,7 +44,19 @@
         </section>
 
         <section class="docs-section" id="badge">
-          <h2 class="docs-section__title">Badge</h2>
+          <div class="docs-badge__row">
+            <h2 class="docs-section__title docs-badge__title">Badge</h2>
+            <div class="docs-badge__items">
+              <span class="ui-badge ui-badge--secondary"><span class="ui-badge__dot" aria-hidden="true"></span>Info</span>
+              <span class="ui-badge ui-badge--success"><span class="ui-badge__dot" aria-hidden="true"></span>Succès</span>
+              <span class="ui-badge ui-badge--warning"><span class="ui-badge__dot" aria-hidden="true"></span>Avert.</span>
+              <span class="ui-badge ui-badge--danger"><span class="ui-badge__dot" aria-hidden="true"></span>Erreur</span>
+            </div>
+          </div>
+          <pre><code>&lt;span class="ui-badge ui-badge--success"&gt;
+  &lt;span class="ui-badge__dot" aria-hidden="true"&gt;&lt;/span&gt;
+  En ligne
+&lt;/span&gt;</code></pre>
         </section>
 
         <section class="docs-section" id="progress">
