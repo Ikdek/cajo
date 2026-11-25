@@ -7,12 +7,39 @@ $colors: (
   neutral: #94a3b8,
 );
 
+$background: #0a0918;
 $surface: #0f0d24;
+$surface-raised: #15132e;
+$border: rgb(255 255 255 / 0.08);
 $white: #ffffff;
+
+$text: #f1f2fb;
+$text-muted: #a5a8c8;
+$text-subtle: #6e7194;
+
+$code-background: #08071a;
+$code-text: #c7c9ec;
+
+$gradient-brand: linear-gradient(135deg, #a855f7 0%, #6366f1 50%, #38bdf8 100%);
 
 $fonts: (
   sans: ('Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif),
   mono: ('JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace),
 );
 
+$spacings: (
+  xs: 0.25rem,
+  s: 0.5rem,
+  m: 1rem,
+  l: 1.5rem,
+  xl: 2rem,
+);
+
+$radius-sm: 0.5rem;
+$radius-lg: 1.125rem;
 $radius-full: 9999px;
+
+$breakpoints: (
+  md: 48rem,
+  lg: 64rem,
+);

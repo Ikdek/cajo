@@ -33,7 +33,8 @@ Côté Tailwind, chaque fichier de module commence par `@reference "tailwindcss"
 
 - Classes BEM préfixées `ui-` et identiques dans les deux versions : `.ui-button`, `.ui-button__icon`, `.ui-button--primary`.
 - Variantes pour chaque module : couleurs `--primary` (défaut), `--secondary`, `--success`, `--warning`, `--danger`, `--neutral` ; tailles `--sm`, `--md` (défaut), `--lg` ; polices `--sans` (défaut, Plus Jakarta Sans), `--mono` (JetBrains Mono).
-- Les variables partagées (couleurs, polices, rayons) sont dans `sass/abstracts/_variables.scss` ; chaque module Sass les charge avec `@use '../../abstracts/variables' as *;`.
-- Direction visuelle : maquette « Nova UI », thème sombre (surface `#0f0d24`), bordures colorées translucides, points lumineux.
+- Les variables partagées (couleurs, polices, espacements, rayons, breakpoints) sont dans `sass/abstracts/_variables.scss`, les mixins (`respond`, `focus-ring`) dans `sass/abstracts/_mixins.scss` ; un module Sass les charge avec `@use '../../abstracts/variables' as *;`.
+- Les styles de la page de documentation (classes `docs-*`) sont dans `sass/docs/docs.scss`, lié avant les modules dans `sass/index.html`. Quand un module est terminé, retirer `docs-nav__link--soon` de son lien et remplacer le badge « À venir » de sa section par « Disponible ».
+- Direction visuelle : maquette fournie, marque « CAJO », thème sombre (surface `#0f0d24`), bordures colorées translucides, points lumineux.
 - Les classes de la documentation sont préfixées `docs-`.
 - Aucun JavaScript : les interactions passent par CSS (`:hover`, `:focus-visible`, `:checked`, `<details>`…).
